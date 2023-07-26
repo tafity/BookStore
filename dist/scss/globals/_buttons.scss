@@ -1,0 +1,74 @@
+@use './util' as i;
+
+button {
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+a:visited,
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+button:hover{
+    transform: scale(1.1);
+    transition: all 0.2s ease-in;
+}
+button:active{
+    transform: scale(1.1);
+    transition: all 0.2s ease-in;
+}
+.loadMore {
+    border: 1px solid hsl(248, 49%, 47%);
+    color: hsl(248, 49%, 47%);
+    padding: 1.10rem 3.87rem;
+    font-family: Montserrat;
+    font-size: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-height: 2.8125rem;
+    margin-bottom: 10rem;
+    margin-left: 40rem;
+    margin-top: 4.51rem;
+    @include i.breakpoint-down(small) {
+        margin-left: 8rem;
+    }
+}
+.buyBtn {
+    position: absolute;
+    border: 1px solid hsl(248, 49%, 47%);
+    color: hsl(248, 49%, 47%);
+    padding: 1.10rem 3rem;
+    font-family: Montserrat;
+    font-size: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 15rem;
+    max-height: 2.8125rem;
+    margin-top: 3rem;
+    margin-left: 15.5rem;
+    white-space: nowrap;
+}
+.InCartBtn {
+    opacity: 0;
+    position: absolute;
+    border:  1px solid #EEEDF5;
+    color: hsl(211, 14%, 42%);
+    padding: 1.10rem 3rem;
+    font-family: Montserrat;
+    font-size: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 15rem;
+    max-height: 2.8125rem;
+    margin-top: 3rem;
+    margin-left: 15.5rem;
+    white-space: nowrap;
+}

@@ -1,0 +1,70 @@
+@use '../globals/util' as f;
+
+.slider-content {
+    overflow: hidden;
+    height: f.rem(702); 
+}
+.slider-content-container {
+    position: relative;
+    padding-top: 4rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img1 {
+    width: 100%;
+    margin-left: -8.7rem;
+    margin-top: -3.4rem;
+}
+.imgg2 {
+    margin-left: 90px;
+}
+
+.img1, .__slide {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.oldBookOnNew {
+    position: absolute;
+    margin-top: -41rem;
+    padding-left: 63.06rem;
+    @include f.breakpoint-down(small) {
+        display: none;
+    }
+}
+
+.TopImg {
+    position: absolute;
+    margin-top: -19rem;
+    padding-left: 66.1rem;
+    @include f.breakpoint-down(small) {
+        display: none;
+    }
+}
+
+.circles-btn{
+    position: absolute;
+    display: flex;
+    height: 0.75rem;
+    margin-top: 1.6rem;
+    margin-left: 35.25rem;
+    @include f.breakpoint-down(small){
+        margin-left: 12rem;
+    }
+}
+.circle__indicator {
+    max-width: 12px;
+    height:12px;
+    background-color: hsl(248, 31%, 95%);
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    cursor: pointer;
+}
+.circle__indicator.currentSlide {
+    background-color: hsl(245, 49%, 73%);
+}
+
