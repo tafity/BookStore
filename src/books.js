@@ -1,6 +1,9 @@
-window.onload = () => {
-    fetchBooks('https://www.googleapis.com/books/v1/volumes?q="subject:Architecture"&key=AIzaSyDEhE1R69ln4GEYTn044O5b6nb1jByNtwA&printType=books&startIndex=0&maxResults=6&langRestrict=en', '.books_container');
+ export function onload() {
+     window.onload = () => {
+        fetchBooks('https://www.googleapis.com/books/v1/volumes?q="subject:Architecture"&key=AIzaSyDEhE1R69ln4GEYTn044O5b6nb1jByNtwA&printType=books&startIndex=0&maxResults=6&langRestrict=en', '.books_container');
+     }
 }
+    
 
 export function fetchBooks(url, domElem) {
     fetch(url)

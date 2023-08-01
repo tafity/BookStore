@@ -2,15 +2,18 @@ const buyBtn = document.querySelectorAll('.buyBtn');
 const parent = document.querySelector('.books_container');
 const cart = document.querySelector('.numOfBooks');
 
-parent.addEventListener('click', (e) => {
-    const targetBtn = e.target;
-    if(targetBtn.closest('.buyBtn')) {
-        push(targetBtn);
-        cartCount(targetBtn);
-        cart.style.opacity = '1'
-        targetBtn.style.opacity = '1'
-    }
-})
+function inCart() {
+    parent.addEventListener('click', (e) => {
+        const targetBtn = e.target;
+        if(targetBtn.closest('.buyBtn')) {
+            push(targetBtn);
+            cartCount(targetBtn);
+            cart.style.opacity = '1'
+            targetBtn.style.opacity = '1'
+        }
+    })
+
+}
 
 function push(targetBtn) {
     if (targetBtn.classList.contains('InCartBtn')) {
@@ -51,5 +54,5 @@ function displayCart() {
         cart.innerHTML = prdCount;
     }
 }
-displayCart();
 
+export {inCart, push, cartCount, displayCart}

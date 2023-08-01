@@ -14,13 +14,13 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
+export const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left;
     currentSlide.classList.remove('currentSlide');
     targetSlide.classList.add('currentSlide');
 }
 
-const slidesAutoplay = () => {
+export const slidesAutoplay = () => {
         let currentSlide = track.querySelector('.currentSlide');
         let nextSlide = currentSlide.nextElementSibling;
         if(slides[2] === currentSlide) {
@@ -30,7 +30,10 @@ const slidesAutoplay = () => {
         }
         moveToSlide(track, currentSlide, nextSlide);
  }
-setInterval(() => slidesAutoplay(), 5000);
+
+export function autoPlay () {
+    setInterval(() => slidesAutoplay(), 5000);
+}
 
 
 dotsNav.addEventListener ('click', e => {
