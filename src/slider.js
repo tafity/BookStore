@@ -1,4 +1,4 @@
-const track = document.querySelector('.slider-content-container');
+export const track = document.querySelector('.slider-content-container');
 const slides = Array.from(track.children);
 const dotsNav = document.querySelector('.circles-btn');
 const dots = Array.from(dotsNav.children);
