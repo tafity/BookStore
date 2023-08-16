@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
     entry: "./src/index.js",
     plugins: [new HtmlWebpackPlugin({
-        template: "./dist/index.html"
+        template: "./dist/main.html"
     })],
         module: {
           rules: [
@@ -15,6 +15,16 @@ module.exports = {
               test: /\.html$/,
               use: ["html-loader"]
             },
+              {
+                test: /\.(svg|png|jpeg|gif)$/,
+                use: {
+                  loader: "file-loader",
+                  options: {
+                    name: "[name].[ext]",
+                    outputPath: "images"
+                  }
+                }
+              },
           ]
       },
 

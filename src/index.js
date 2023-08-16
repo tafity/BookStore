@@ -1,11 +1,6 @@
 import { onload } from "./books";
 onload();
 import "../dist/css/style.css";
-
-import imgs from "./img/search.svg"
-const img = new Image();
-img.src = imgs
-
 import { autoPlay } from "./slider";
 autoPlay();
 import { menu} from "./menu";

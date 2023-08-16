@@ -7,14 +7,6 @@ module.exports = merge(common, {
     output: {
         filename: "main.js", 
         path: path.resolve(__dirname, "dist"),
-        assetModuleFilename: 'assets/[hash][ext][query]'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(svg|png|jpeg|gif)$/i,
-                type: 'asset/resource'
-              }
-        ]
+       // assetModuleFilename: 'assets/[hash][ext][query]'
     }
 });
